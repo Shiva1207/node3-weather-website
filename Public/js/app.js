@@ -1,5 +1,3 @@
-console.log('This is client side javascript')
-
 const weatherform = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
@@ -10,7 +8,7 @@ weatherform.addEventListener('submit', (event) =>
 {    
      event.preventDefault()   
      const location = search.value
-     const url = 'http://localhost:3000/weather?address=' + location 
+     const url = '/weather?address=' + location 
       
   
      fetch(url).then((response) => {
