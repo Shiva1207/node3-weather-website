@@ -10,7 +10,7 @@ const forecast = (latitude, longitute, callback) => {
        if(error){
            callback('check your internet connection', undefined)
        } else if (body.error){
-          console.log('Unable to find location', undefined)
+          callback('Unable to find location', undefined)
        } else {
            callback(undefined, 'It is currently ' + body.current.temperature + ' degree out. ' + 'It feels like '  + body.current.feelslike + ' degree out.')
        }
